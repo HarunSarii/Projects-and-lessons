@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // document.write('Hello!<br>');
 // document.write('Clarusway');
 // console.log('Helloo!\nClaruswayy');
@@ -73,4 +74,76 @@
 // "CLARUSWAY" > "Clarusway";
 
 
-let operator = ("işlem giriniz")
+// let operator = ("işlem giriniz")
+
+// var i = 0;
+// var mult=5;
+// while (i < 3) {
+// var mult = mult * i;
+// i++;
+// }
+// console.log ("The answer is: " + mult);
+
+// ! arithmetic ops
+var num1 = 9;
+var num2 = 2;
+var result;
+
+result = num1 + num2;
+
+result = num1 - num2;
+// result = num1 * num2;
+// result = num1 / num2;
+// result = num1 % num2;
+// num1++;
+// ++num2;
+// console.log(-num2);
+// console.log(num2 ** 3);
+// result = 0;
+// result += num1;
+// result -= num2;
+// result *= num1;
+// result /= num2;
+// result %= num2;
+// result **= num2;
+// var a = "Merhaba";
+// console.log(typeof a)
+// console.log(`2+ 3 = ${2+3}`);
+
+// var name = "Harun";
+
+// console.log( a,`${name}`);
+
+// var surname = " harun \"SARI\"";
+// console.log(surname);
+
+// console.log((0.1+0.2).toFixed(5))
+
+// console.log(Math.floor(9.5+1.2))
+// var x = 5>7
+// console.log(Boolean(9>5))
+// console.log(x)
+// var x = -0;
+// console.log(Boolean(x));
+// console.log(false == true)
+
+// let num = prompt ("enter a number");
+// num = parseInt(num);
+// console.log(num);
+
+
+// typeof null; // "object"
+// typeof undefined; // "undefined"
+// typeof false; // "boolean"
+// typeof 0; // "number"
+// typeof NaN; // "number"
+
+// console.log('\n*** Number operations ***');
+// console.log('Number.MAX_VALUE:', Number.MAX_VALUE);
+// console.log('Number.MAX_SAFE_INTEGER:', Number.MAX_SAFE_INTEGER);
+// console.log('Number.MIN_VALUE:', Number.MIN_VALUE);
+// console.log('Number.MIN_SAFE_INTEGER:', Number.MIN_SAFE_INTEGER);
+// console.log('Number.EPSILON:', Number.EPSILON);
+// console.log('Number.POSITIVE_INFINITY:', Number.POSITIVE_INFINITY);
+// console.log('Number.NEGATIVE_INFINITY:', Number.NEGATIVE_INFINITY);
+// console.log('Number.NaN:', Number.NaN);
