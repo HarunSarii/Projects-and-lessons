@@ -190,11 +190,78 @@
 //     console.log('The number is negative');
 //   }
 //   console.log('The if... if...else statement end');
-//   console.log('**********');
-let a = true;
-let b = false;
-if (a || b) {
-    console.log("both of them true");
-} else {
-    console.log("don't know");
+//    console.log('**********');
+// let a = true;
+// let b = false;
+// if (a || b) {
+//     console.log("both of them true");
+// } else {
+//     console.log("don't know");
+// }
+// console.log(true? "hello" : "goodbye");
+
+// let age = 10;
+// console.log(age > 7 ? "hello" : "goodbye");
+
+// let grade = prompt("enter your score");
+// let result = (grade > 50) ? "passed" : "failed";
+// // console.log(`you ${result} the exam`);
+// let a = prompt('enter num');
+// result = a >= 0 ? (a == 0 ? 'zero' : 'positive') : 'negative';
+// console.log(`The number is ${result}.`);
+// console.log('Nested ternary if statement end\n');
+// console.log('**********');
+
+// let a = 2;
+// switch (a) {
+//   case 1:
+//     a = 'one';
+//     break;
+//   case 2:
+//     a = 'two';
+//     break;
+//   default:
+//     a = 'not found';
+//     break;
+// }
+// console.log(`The value is ${a}`);
+
+// let operator = prompt("işlem giriniz\n+,-,*,/");
+// const num1 = prompt("sayi1 girin");
+// const num2 = prompt("sayi2 girin");
+// switch (operator) {
+//     case "+":
+//         result = parseFloat(num1) + parseFloat(num2);
+//         break;
+//     case "-":
+//         result = num1 - num2;
+//         break;
+//     case "*":
+//         result = num1 * num2;
+//         break;
+//     case "/":
+//         result = num1 / num2;
+//         break;
+//     default:
+//         console.log("invalid operation");
+
+// }
+// console.log(`result of ${num1} ${operator} ${num2} = ${result}`);
+
+let day = prompt("gün giriniz");
+switch (day) {
+    case "monday" || "wednesday" ||"thursday":
+        result = "session";
+        break;
+    case "tuesday" || "friday" || "sunday" :
+        result = "no session";
+        break;
+    case "saturday":
+        result = "double session";
+        break;
+    
+    default:
+        console.log("invalid entry");
+
 }
+console.log(`In  ${day} we have ${result}`);
