@@ -248,20 +248,95 @@
 // }
 // console.log(`result of ${num1} ${operator} ${num2} = ${result}`);
 
-let day = prompt("gün giriniz");
-switch (day) {
-    case "monday" || "wednesday" ||"thursday":
-        result = "session";
-        break;
-    case "tuesday" || "friday" || "sunday" :
-        result = "no session";
-        break;
-    case "saturday":
-        result = "double session";
-        break;
+// let day = prompt("gün giriniz");
+// switch (day) {
+//     case "monday" || "wednesday" ||"thursday":
+//         result = "session";
+//         break;
+//     case "tuesday" || "friday" || "sunday" :
+//         result = "no session";
+//         break;
+//     case "saturday":
+//         result = "double session";
+//         break;
     
-    default:
-        console.log("invalid entry");
+//     default:
+//         console.log("invalid entry");
 
-}
-console.log(`In  ${day} we have ${result}`);
+// }
+// console.log(`In  ${day} we have ${result}`);
+
+// let i = 0;
+// let sum = 0;
+// while (i < 4) {
+//   sum += i;
+//   i++;
+// }
+// console.log(`The total is : ${sum}`);
+// let bests = ['Clarusway', 'Google', 'Amazon', 'Tesla'];
+
+// let len = bests.length;
+
+// for (let i = 0; i < bests.length; i++) {
+//   console.log(`${i + 1} : ${bests[i]}`);
+// }
+// let text = 'Clarusway';
+// for (let i = 0, j = 10; i < j; i++, j--) {
+//   console.log(text[i]);
+// }
+// for (let i = 1; i <= 10; i++) {
+//   for (let j = 1; j <= 10; j++) {
+//     document.write(`${i} x ${j} = ${i * j}<br>`);
+//   }
+//   document.write('<br>');
+// }
+// const factNumber = 5;
+// const factNumber = Number(prompt('Enter a number! '));
+// let calcFactorial = 1;
+
+// for (let i = factNumber; i > 0; i--) calcFactorial *= i;
+
+// console.log(calcFactorial);
+
+// let factNumber;
+// let calcFactorial = 1;
+// let message = 'Enter a number! ';
+// while (true) {
+//   factNumber = Number(prompt(message));
+//   if (Number.isInteger(factNumber) && factNumber > 0) break;
+//   message = 'Please enter a positive integer';
+// }
+// for (let i = factNumber; i > 0; i--) calcFactorial *= i;
+
+// console.log(`${factNumber}! = ${calcFactorial}`);
+
+// for (let i = 1; i <= 100; i++) {
+//     if( i%3 === 0 && i%5 === 0) {
+//     console.log(`${i}: FizzBuzz`);
+// }
+//     else if (i%3 == 0) {
+//     console.log(`${i}: Fizz`);
+// }
+//     else if (i%5 == 0) {
+//     console.log(`${i}: Buzz`);
+//     } else {
+//     console.log(`${i}`)
+//     }
+// }
+
+// const x=4;
+// x%2 == 0 ? console.log("even") : console.log("odd");
+// const text = 'Clarusway';
+// const char = 'a';
+// for (let i = 0; i < text.length; i++) {
+//   if (char === text[i]) {
+//     console.log(`${char} is at index ${i}`);
+//     break;
+//   }
+// }
+// let randomNumber = 0;
+// while(randomNumber !== 6) {
+//     let randomNumber = Math.trunc(Math.random()*6)+1;
+//     console.log(`random number is ${randomNumber}`);
+// }
+
