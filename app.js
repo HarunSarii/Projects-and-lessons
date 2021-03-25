@@ -259,7 +259,7 @@
 //     case "saturday":
 //         result = "double session";
 //         break;
-    
+
 //     default:
 //         console.log("invalid entry");
 
@@ -339,4 +339,27 @@
 //     let randomNumber = Math.trunc(Math.random()*6)+1;
 //     console.log(`random number is ${randomNumber}`);
 // }
+// function sayHi() {
+//     console.log("Hello!")
+// } 
+// sayHi()
+// let num = parseInt(prompt("enter a number"));
+// function isEven(num) {
+//     num %2 == 0 ? console.log("even") : console.log("odd")
+// }
+// isEven(158)
+// isEven(75);
+
+
+// let num = parseInt(prompt("enter a number"));
+
+// function pascalSum(n) {
+//     let sum = 0;
+//     while (n >= 0){
+//     sum += n;
+//     n--;
+//  }
+//  return sum;
+// }
+// console.log("sonuç: ", pascalSum(4));
 
