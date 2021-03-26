@@ -350,7 +350,6 @@
 // isEven(158)
 // isEven(75);
 
-
 // let num = parseInt(prompt("enter a number"));
 
 // function pascalSum(n) {
@@ -363,3 +362,29 @@
 // }
 // console.log("sonuç: ", pascalSum(4));
 
+// const mult2 = (num1, num2) => num1 * num2;
+// console.log(mult2(5, 9));
+
+// const greet = (name2) => `Welcome ${name2}`;
+// console.log(greet(`harun`));
+
+// const factorial = (num) => {
+//     let r = 1;
+//     for (let i = 1; i <= num; i++) {
+//         r *= i;
+//     }
+//     return r;
+// };
+// console.log(factorial(num = 5));
+
+// function sumAll (rr, ...args) {
+//     let sum = 0;
+//     for ( let i=0; i < args.length; i++){
+//         sum += parseInt(args[i]);
+//     }
+//     return [rr, sum];
+// }
+// console.log(sumAll(2,5,8,9));
+
+// const goodMorning = () => "Good Morning!";
+// console.log(goodMorning);
