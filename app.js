@@ -365,8 +365,8 @@
 // const mult2 = (num1, num2) => num1 * num2;
 // console.log(mult2(5, 9));
 
-// const greet = (name2) => `Welcome ${name2}`;
-// console.log(greet(`harun`));
+// const greet = (name2 = "Student") => `Welcome ${name2}`;
+// console.log(greet("Harun"));
 
 // const factorial = (num) => {
 //     let r = 1;
@@ -377,14 +377,79 @@
 // };
 // console.log(factorial(num = 5));
 
-// function sumAll (rr, ...args) {
+// function sumAll (rr, ... args) {
 //     let sum = 0;
-//     for ( let i=0; i < args.length; i++){
+//     for ( let i = 0; i < args.length; i++){
 //         sum += parseInt(args[i]);
 //     }
 //     return [rr, sum];
 // }
-// console.log(sumAll(2,5,8,9));
+// console.log(sumAll(2,5,8));
 
 // const goodMorning = () => "Good Morning!";
 // console.log(goodMorning);
+// let a = 10;
+// let b = 20;
+// (a, b) => a + b + 100;
+
+// let num1 = 10;
+// var num2 = 20;
+// console.log('at the global scope');
+// console.log({ num1, num2 });
+// func1();
+// console.log({ num1, num2 });
+// console.log({ num3, num4 });
+
+// // function declaration
+// function func1() {
+//   let num1 = 101;
+//   let num2 = 102;
+//   var num3 = 103;
+//   console.log('..inside func1');
+//   if (num1 < num2) {
+//     console.log('inside if block');
+//     let num1 = 201;
+//     // var num2 = 205;
+//     console.log({ num1, num2 });
+//     console.log({ num3, num4 });
+//     // let num3 = 206;
+//     var num4 = 204;
+//     num1++;
+//     num2++;
+//     num3++;
+//     num4++;
+//     console.log({ num1, num2 });
+//     console.log({ num3, num4 });
+//   }
+//   console.log('after if block');
+//   num3++;
+//   num4++;
+//   console.log({ num1, num2 });
+//   console.log({ num3, num4 });
+// }
+// var str = new String("Just Awesome");
+// console.log("str.charAt(0) is: "+ str.charCodeAt(0));
+
+// console.log(Boolean("ı" > "i"));
+// console.log("ı".localeCompare("i","tr"));
+// console.log("c".localeCompare("a","us"));
+// console.log("b".localeCompare("d","tr"));
+// var greeting = ' \t\t                    Hello world!               \n\nWelcome\tHome\n\n';
+// console.log(greeting);
+// console.log('-----');
+// console.log(greeting.trim());
+
+// var re = /easily/gi;
+// var str = 'Full-Stack is awesome,\
+// and students will easily get a job.';
+// if (str.search(re) == -1) {
+//   console.log('Does not contain easily');
+// } else {
+//   console.log('Contains easily and the index is', str.search(re));
+// }
+
+// var str = 'Full-Stack: awesome future is coming!';
+// var sliced = str.slice(12, -11);
+// console.log(sliced);
+
+
