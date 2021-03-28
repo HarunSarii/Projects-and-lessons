@@ -452,4 +452,36 @@
 // var sliced = str.slice(12, -11);
 // console.log(sliced);
 
+// var str =
+// eslint-disable-next-line max-len
+// 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit earum vero, qui repellendus nam laudantium.';
+// var splitted = str.split('', 9);
+// console.log(splitted);
+// output: ["Lorem", "ipsum", "dolor,", "sit", "amet"]
 
+// ! substr()
+
+// var str = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.';
+// console.log('(1,2): ' + str.substr(1,2));
+// console.log('(-2,2): ' + str.substr(-2, 2));
+// console.log('(1): ' + str.substr(1));
+// console.log('(-20, 2): ' + str.substr(-20, 2));
+// console.log('(13, 3): ' + str.substr(13, 4));
+
+// ! toString valueOf
+
+// const strObj = new String('Clarusway');
+// console.log(strObj);
+// console.log(strObj.toString());
+// console.log(strObj.valueOf());
+
+// ! startsWith()
+
+// var str = 'hello world!!!';
+// console.log(str.startsWith('hello')); // true
+
+// ! endsWith()
+
+// var str = 'Hello World !!! ';
+// console.log(str.endsWith('! ')); // false
+// console.log(str.endsWith('Hello', 5)); // true
