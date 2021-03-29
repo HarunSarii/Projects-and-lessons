@@ -485,3 +485,16 @@
 // var str = 'Hello World !!! ';
 // console.log(str.endsWith('! ')); // false
 // console.log(str.endsWith('Hello', 5)); // true
+
+var str = 'Clarusway ';
+// console.log(str.repeat());   // no output
+// console.log(str.repeat(1));  // 1 time
+// console.log(str.repeat(20)); // 20 times
+
+// ! reverse string
+
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+reverseString('Clarusway'); // "yawsuralC"
+reverseString('JavaScript-tpircSavaJ 🎯 sF'); // oops
