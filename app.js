@@ -178,7 +178,7 @@
 //   }
 //   console.log('The nested if statement is a little bit confusing');
 //   console.log('**********');
-  
+
 // if (number5 > 0) {
 //     console.log('The number is positive');
 //   }
@@ -341,7 +341,8 @@
 // }
 // function sayHi() {
 //     console.log("Hello!")
-// } 
+// }
+
 // sayHi()
 // let num = parseInt(prompt("enter a number"));
 // function isEven(num) {
