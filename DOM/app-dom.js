@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // // const text = document.querySelector(".title");
 // // const changeColor = document.querySelector(".changeColor");
 // const userList = document.querySelector(".name-list");
@@ -30,7 +31,6 @@
 
 // for ( user of userList){
 //     user.addEventListener("click", function() {
-//        console.log(this); 
+//        console.log(this);
 //     // this.style.color = "red";
 //     });
-// }
