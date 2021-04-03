@@ -36,3 +36,16 @@ button4.addEventListener(
   // eslint-disable-next-line no-return-assign
   () => (button4.textContent = 'Event Listener'),
 );
+
+const div = document.querySelector("div");
+
+div.addEventListener("dblclick", changeColor);
+
+function changeColor() {
+    const r = Math.trunc(Math.random()*255);
+    const g = Math.trunc(Math.random()*255);
+    const b = Math.trunc(Math.random()*255);
+
+
+}
+document.body.addEventListener("click", () => alert("you clicked body"));
