@@ -1,0 +1,22 @@
+body {
+  background-color: cadetblue;
+}
+
+#container {
+  background-color: darkgoldenrod;
+  border: 1px solid black;
+  height: 400px;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+}
+p {
+  color: white;
+  font-size: 1.5em;
+}
+input {
+  width: 70%;
+  margin: 2em auto;
+}
+
+border-radius: 10%;
