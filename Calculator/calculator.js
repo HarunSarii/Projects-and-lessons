@@ -139,6 +139,7 @@ equalEl.addEventListener('click', () => {
 });
 
 // Add Event Listeners to numbers and decimal
+// eslint-disable-next-line no-plusplus
 for (let i = 0; i < numberElArray.length; i++) {
   const numberEl = numberElArray[i];
   numberEl.addEventListener('click', () => {
