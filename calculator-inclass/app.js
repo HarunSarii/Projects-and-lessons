@@ -40,20 +40,45 @@ const numbersArray = [
 let previousOperand = "";
 let currentOperand = "";
 let operation = undefined;
+let temporaryOperand = "";
 
 // Functions
 
 function DisplayNumbers() {
-  previousElement.innerText = previousOperand;
+  if (operation) {
+    previousElement.innerText = `${previousOperand} ${operation}`;
+  } else {
+    previousElement.innerText = previousOperand;
+  }
+
   currentElement.innerText = currentOperand;
 }
 
 function AppendNumber(number) {
+  console.log("NUMBER: ", number);
+  
+    if (number === "." && currentOperand.includes(".")) return;
+  if (number === 0 && currentOperand === "0") return;
+  if (currentOperand.length > 7) return;
+
+  
+
   currentOperand = currentOperand.toString() + number.toString();
   DisplayNumbers();
 }
 
 function ChooseOperation(selectedOperation) {
+  if (temporaryOperand) {
+    previousOperand = temporaryOperand.toString();
+    currentOperand = "";
+    temporaryOperand = "";
+    operation = selectedOperation;
+    DisplayNumbers();
+    return;
+  }
+
+  if (currentOperand === "") return;
+
   previousOperand = currentOperand;
   currentOperand = "";
   operation = selectedOperation;
@@ -65,6 +90,8 @@ function Compute() {
   const previous = parseFloat(previousOperand);
   const current = parseFloat(currentOperand);
   let computation;
+
+  if (isNaN(previous) || isNaN(current) ) return;
 
   switch (operation) {
     case "+":
@@ -91,14 +118,26 @@ function Compute() {
   operation = undefined;
   previousOperand = "";
   DisplayNumbers();
+  temporaryOperand = currentOperand;
+  currentOperand = "";
 }
 
+function AllClear() {
+  currentOperand = "";
+  previousOperand = "";
+  operation = undefined;
+  temporaryOperand = "";
+  DisplayNumbers();
+}
 
+function PlusMinus() {
+  currentOperand = currentOperand * -1;
+  DisplayNumbers();
+}
 
-
-function PlusMines() {
-    currentOperand = currentOperand * -1;
-    DisplayNumbers();
+function Percent() {
+  currentOperand = currentOperand / 100;
+  DisplayNumbers();
 }
 
 // Add event listener to operators buttons
@@ -125,6 +164,18 @@ equalButton.addEventListener("click", () => {
 
 // Add event listener to top buttons
 
+acButton.addEventListener("click", () => {
+  AllClear();
+});
+
+pmButton.addEventListener("click", () => {
+  PlusMinus();
+});
+
+percentButton.addEventListener("click", () => {
+  Percent();
+});
+
 // Add event listener to numbers buttons
 
 for (let i = 0; i < numbersArray.length; i++) {
@@ -132,5 +183,35 @@ for (let i = 0; i < numbersArray.length; i++) {
 
   number.addEventListener("click", () => {
     AppendNumber(i);
+    temporaryOperand = "";
   });
 }
+
+decimalButton.addEventListener("click", () => {
+  AppendNumber(decimalButton.innerText);
+});
+
+document.addEventListener('keydown', (event) => {
+
+    switch(event.keyCode){
+        case 96:
+        case 97:
+        case 98:
+        case 99:
+        case 100:
+        case 101:
+        case 102:
+        case 103:
+        case 104:
+        case 105:
+            AppendNumber(`${event.key}`);
+            break;
+        case 106:
+        case 107:
+        case 109:
+        case 111:
+            ChooseOperation(`${event.key}`)
+        case 13:
+            Compute();
+    }
+})
