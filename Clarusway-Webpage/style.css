@@ -1,0 +1,60 @@
+body {
+  background-color: rgb(47, 56, 56);
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.1rem;
+}
+span {
+  color: purple;
+}
+.header {
+  border-bottom: 2px solid purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+  align-items: center;
+  background-image: url(./images/showcase.jpg);
+  height: 400px;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parts {
+  display: flex;
+
+  background: rgb(238, 231, 231);
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.parts div {
+  margin: 20px 10px 20px;
+}
+
+button {
+  color: white;
+  background-color: orangered;
+  border: none;
+  padding: 10px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
