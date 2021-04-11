@@ -88,3 +88,26 @@ input {
   text-align: left;
   width: 20%;
 }
+
+/* About */
+.about {
+  background-color: whitesmoke;
+  color: black;
+  margin: 10px 25px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.first p:nth-of-type(2),
+.second {
+  background-color: rgb(47, 56, 56);
+  color: white;
+}
+
+.first,
+.second {
+  margin: 10px;
+  padding: 20px;
+}
