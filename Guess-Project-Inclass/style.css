@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to left top, lightblue, coral);
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+#header {
+  color: black;
+  margin: 4rem 0 2rem 0;
+}
+
+#number-input {
+  height: 2rem;
+  border-radius: 5px;
+  outline: none;
+  width: 100px;
+  font-size: 1.3rem;
+  border: none;
+}
+
+#check-button {
+  background-color: aqua;
+  border: none;
+  width: 100px;
+  height: 2rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+#number-image {
+  width: 350px;
+  margin: 2.5rem;
+}
