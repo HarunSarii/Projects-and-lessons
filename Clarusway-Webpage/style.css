@@ -58,3 +58,33 @@ input {
   border: none;
   outline: none;
 }
+
+/* Services */
+
+.services {
+  text-align: left;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
+.left {
+  width: 80%;
+}
+.left div {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin: 10px 25px;
+  padding: 20px 10px;
+}
+
+.quote {
+  background-color: rgb(47, 56, 56);
+  color: white;
+  margin: 10px 25px;
+  padding: 20px 20px 10px 10px;
+  text-align: left;
+  width: 20%;
+}
