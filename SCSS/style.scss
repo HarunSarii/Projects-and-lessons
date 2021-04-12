@@ -1,0 +1,37 @@
+$size: 20px;
+$harun: aqua;
+$background-color: bisque;
+$font-size: 20px;
+$height: 100px;
+
+body {
+  border: 0px;
+  margin: 0px;
+  font-size: $font-size;
+  background-color: $background-color;
+  color: $harun;
+  size: $size;
+}
+
+ul {
+  font-size: $font-size;
+  margin: 10px;
+  padding: 5px;
+  li {
+    size: 15px;
+    color: red;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin mybox($color, $height) {
+  color: green;
+  height: 15px;
+  border: 3px solid brown;
+}
+
+.liste {
+  @include mybox($color: brown, $height: 30px);
+}
