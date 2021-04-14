@@ -1,4 +1,7 @@
-@import "_reset";
+@import "reset";
+@import "container";
+@import "item";
+
 a {
   text-decoration: none;
 }
@@ -79,32 +82,4 @@ body {
   border: 3px solid purple;
   color: darkmagenta;
   font-size: 30px;
-}
-.item {
-  text-align: center;
-  font-size: 25px;
-}
-.item-1 {
-  margin: 10px;
-  padding: 5px;
-  background-color: #888;
-  margin-top: 15px;
-}
-.item-2 {
-  margin: 10px;
-  padding: 10px;
-  background-color: #888;
-  margin-top: 15px;
-}
-.item-3 {
-  margin: 10px;
-  padding: 15px;
-  background-color: #888;
-  margin-top: 15px;
-}
-.item-4 {
-  margin: 10px;
-  padding: 20px;
-  background-color: #888;
-  margin-top: 15px;
 }
