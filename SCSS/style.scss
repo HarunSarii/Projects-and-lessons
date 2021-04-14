@@ -1,37 +1,113 @@
-$size: 20px;
-$harun: aqua;
-$background-color: bisque;
-$font-size: 20px;
-$height: 100px;
+// $size: 20px;
+// $harun: aqua;
+// $background-color: bisque;
+// $font-size: 20px;
+// $height: 100px;
 
-body {
-  border: 0px;
-  margin: 0px;
-  font-size: $font-size;
-  background-color: $background-color;
-  color: $harun;
-  size: $size;
-}
+// body {
+//   border: 0px;
+//   margin: 0px;
+//   font-size: $font-size;
+//   background-color: $background-color;
+//   color: $harun;
+//   size: $size;
+// }
 
-ul {
-  font-size: $font-size;
-  margin: 10px;
-  padding: 5px;
-  li {
-    size: 15px;
-    color: red;
-    a {
-      text-decoration: none;
-    }
+// ul {
+//   font-size: $font-size;
+//   margin: 10px / 2;
+//   padding: 5px * 3;
+//   li {
+//     size: 15px;
+//     color: red;
+//     a {
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+// @mixin mybox($color, $height) {
+//   color: green;
+//   height: 15px;
+//   border: 3px solid brown;
+// }
+
+// .liste {
+//   @include mybox($color: brown, $height: 30px);
+// }
+
+// .liste2 {
+//   @include mybox($color: red, $height: 40px);
+// }
+
+// .kutu {
+//   border: 5px solid blue;
+//   padding: 3px;
+//   color: blueviolet;
+// }
+
+// .kutu1 {
+//   @extend .kutu;
+//   border-color: chocolate;
+// }
+// .kutu2 {
+//   @extend .kutu;
+//   border-color: crimson;
+// }
+
+// p {
+//   @if size == 10 {
+//     background-color: bisque;
+//     padding: 25px;
+//     margin: 15px;
+//   }
+//   @else if (size < 10) {
+//     background-color: aqua;
+//     padding: 20px;
+//     margin: 30px;
+//   }
+//   @else {
+//     background-color: red;
+//     padding: 40px;
+//     margin: 50px;
+//   }
+// }
+
+// $i: 10;
+// @while $i>0 {
+//   .border - #{$i} {
+//     border: 5px * $i;
+//   }
+//   $i: $i -2;
+// }
+
+// @for $i from 1 to 5 {
+//   .item-#{$i} {
+//     height: 10px * $i;
+//     padding: 5px * $i;
+//   }
+// }
+
+// $array: 1, 2, 3, 4, 5;
+
+// @each $i in $array {
+//   .item-#{i} {
+//     margin: $i * 10px;
+//     color: #111 * $i;
+//   }
+// }
+
+$bisque: bisque;
+$blue: blue;
+$red: red;
+$brown: brown;
+
+$array: $bisque, $blue, $red, $brown;
+@for $i from 1 through lenght(array) {
+  .item-#{i} {
+    background: nth($array, $i);
+    margin: 5px;
+    height: 50px;
+    padding: 10px;
   }
-}
-
-@mixin mybox($color, $height) {
-  color: green;
-  height: 15px;
-  border: 3px solid brown;
-}
-
-.liste {
-  @include mybox($color: brown, $height: 30px);
 }
