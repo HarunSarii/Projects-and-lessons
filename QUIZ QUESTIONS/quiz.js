@@ -54,3 +54,70 @@
 // 8.2
 // 82
 // undefined
+
+// var dog = {
+//     name: "Rocky",
+//     legs: 4,
+//     tail: 1,
+//     qualities: ["loyalty","companionship"],
+//     bark : function() {
+//       console.log("woof");  },
+//     result : function() {
+//       return this.name+ " has " + this.legs + " legs.";
+//     }
+//     };
+  
+//   dog.bark();
+//   console.log(dog.result());
+
+// class Dog {
+//     constructor(name, foot) {
+//       this.dogName = name;
+//       this.foot = foot;
+//     }
+//     current(){
+//        return "I have a " + this.dogName + " and it has " + this.foot + " legs" ;
+//     }
+//   }
+//   myDog = new Dog("Buldog", 4) 
+//   document.getElementById("content").innerHTML = myDog.current();
+
+// class Dog {
+//     constructor(name, foot) {
+//       this.dogName = name;
+//       this.foot = foot;
+//     }
+//     current(){
+//        return "I have a " + this.dogName;
+//     }
+//   }
+  
+//   class Specy extends Dog {
+//     constructor(name, foot, char) {
+//       super(name, foot);
+//       this.character = char;
+//     }
+//     show() {
+//       return this.current() + ', it is  ' + this.character;
+//     }
+//   }
+  
+//   myDog = new Specy("Buldog", 4, "curious");
+//   document.getElementById("content").innerHTML = myDog.show();
+
+// class Song {
+//     constructor(genre) {
+//       this.genre = genre;
+//     }
+//     get sgenre() {
+//       return this.genre;
+//     }
+//     set sgenre(newgenre) {
+//       this.genre = newgenre;
+//     }
+//   }
+
+//   mysong = new Song("Classical");
+
+//   document.getElementById("content").innerHTML =
+//     "My favourite is " + mysong.sgenre;
