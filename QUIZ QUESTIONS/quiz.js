@@ -121,3 +121,33 @@
 
 //   document.getElementById("content").innerHTML =
 //     "My favourite is " + mysong.sgenre;
+
+// const arr1 = ['a', 'b', 'c'];
+// const arr2 = ['b', 'c', 'a'];
+// console.log(
+//  arr1.sort() === arr1,
+//  arr2.sort() == arr2,
+//  arr1.sort() === arr2.sort()
+// );
+
+// let numberStore = [0, 1, 2];
+// let newNumber = 12;
+// numberStore = [...numberStore, newNumber];
+// console.log(numberStore);
+
+// const arr1=[1,2]; const arr2=[...arr1]; arr1.push(3);
+// console.log(arr2);
+// const obj1={a:1,b:2}; const obj2={...obj1}; obj1['c']=3;
+// console.log(obj2);
+
+// const arr = [...new Set([3, 1, 2, 3, 4])];
+// console.log(Set);
+
+// const arr = [...new Set([3, 1, 2, 3, 4])];
+// console.log(arr.length, arr[2]);
+
+// var x=5;
+// var y=6;
+// var res=eval("x*y");
+// document.write(res);
+
