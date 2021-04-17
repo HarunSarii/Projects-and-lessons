@@ -85,26 +85,26 @@
 // console.log(newPerson.firstName);
 // console.log(person.firstName);
 
-const hotel = {
-    name: 'Hotel Clarusway',
-    categories: ['Spa', 'Swimming Pool', 'Resort'],
-    options: ['just stay', 'free breakfast', 'all inclusive'],
-    rooms: ['2-bed', '3-bed', '4-bed'],
-    receptionHours: {
-      mon: {
-        open: 8,
-        close: 22,
-      },
-      fri: {
-        open: 9,
-        close: 21,
-      },
-      sat: {
-        open: 10,
-        close: 20,
-      },
-    },
-}
+// const hotel = {
+//     name: 'Hotel Clarusway',
+//     categories: ['Spa', 'Swimming Pool', 'Resort'],
+//     options: ['just stay', 'free breakfast', 'all inclusive'],
+//     rooms: ['2-bed', '3-bed', '4-bed'],
+//     receptionHours: {
+//       mon: {
+//         open: 8,
+//         close: 22,
+//       },
+//       fri: {
+//         open: 9,
+//         close: 21,
+//       },
+//       sat: {
+//         open: 10,
+//         close: 20,
+//       },
+//     },
+// }
 
 //destructing objects
 
@@ -125,12 +125,51 @@ const hotel = {
 
 // console.log(hotel.receptionHours.sat);
 
-const guests = hotel.numGuests || 50;
-console.log(guests);
+// const guests = hotel.numGuests || 50;
+// console.log(guests);
 
-hotel.numGuests = 0;
-const guests2 = hotel.numGuests || 40;
-console.log(guests2);
+// hotel.numGuests = 0;
+// const guests2 = hotel.numGuests || 40;
+// console.log(guests2);
 
-const guests3 = hotel.numGuests ?? 40;
-console.log(guests3);
+// const guests3 = hotel.numGuests ?? 40;
+// console.log(guests3);
+
+
+function makeColor(r, g, b) {
+    const color = {};
+    color.r = r;
+    color.g = g;
+    color.b = b;
+    color.rgb = function () {
+      const { r, g, b } = this;
+      return `rgb(${r}, ${g}, ${b})`;
+    };
+    color.hex = function () {
+      const { r, g, b } = this;
+      return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    };
+    return color;
+  }
+
+  const firstColor = makeColor(55, 55, 55);
+  console.log(firstColor);
+  console.log(firstColor.rgb());
+  console.log(firstColor.hex());
+
+  const div1 = document.getElementById('mydiv1');
+  const div2 = document.getElementById('mydiv2');
+
+  div1.style.backgroundColor = firstColor.rgb();
+
+  function Color(r,g, b) {
+      this.r = r;
+      this.g = g;
+      this.b = b;
+  }
+
+console.log(Color(55, 55, 55));
+
+const color1 = new Color(55, 55, 55);
+console.log(color1);
+
