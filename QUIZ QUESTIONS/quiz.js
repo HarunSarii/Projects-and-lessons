@@ -222,3 +222,28 @@
 // console.log(arr.flat(2));
 // [1, 2, -1, -2, "a", "b"]
 
+// const mySec = ["1","2","3","4","5","6","7", "8", "9", "0"];
+// let result = mySec.reduce((pre, cur) => {
+//     return pre + cur;
+// });
+// console.log(result);
+// 1234567890
+
+
+// var swapCase = function(letters){
+//     var newLetters = "";
+//     for(var i = 0; i<letters.length; i++){
+//         if(letters[i] === letters[i].toLowerCase()){
+//             newLetters += letters[i].toUpperCase();
+//         }else {
+//             newLetters += letters[i].toLowerCase();
+//         }
+//     }
+//     console.log(newLetters);
+//     return newLetters;
+// }
+
+// var text = 'The Quick Brown Fox';
+// var swappedText = swapCase(text);
+// tHE qUICK bROWN fOX
+
