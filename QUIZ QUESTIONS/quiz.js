@@ -151,3 +151,74 @@
 // var res=eval("x*y");
 // document.write(res);
 
+// var x = ["a", "b", "c"];
+// var y = ["a", "b", "c"];
+// console.log(x == y);
+// console.log(x === x.reverse());
+// console.log(x);
+
+// const c1 = {f:"adam"};
+// const c2 = c1;
+
+// c2.f = "elvis";
+// console.log(c1.f); 
+//output:elvis
+
+// var a = Array.from("Clarusway");
+// console.log(a);
+
+// const b = Array.from([3,5,7], n => n*n);
+// console.log(b);
+//output:
+// ["C", "l", "a", "r", "u", "s", "w", "a", "y"]
+// [9, 25, 49]
+
+// var a = 0.3;
+// var b = 0.6;
+// console.log( (a+b)==0.9 );
+//false 0.8999999999999999
+
+//FOR-IN  VS. FOR-OF
+// let mySchool = ["c", "l", "a"];
+// for (i in mySchool) {
+//     console.log(i);
+// };
+// for (i of mySchool) {
+//     console.log(i);
+// }
+// quiz.js:183 0
+// quiz.js:183 1
+// quiz.js:183 2
+// quiz.js:186 c
+// quiz.js:186 l
+// quiz.js:186 a
+
+// for (var i = 5; i < 7; i++)
+// {
+//     console.log(i);
+//     setTimeout(function(){
+//         console.log( i);}, i*1000);
+//     }
+// console.log(i+2); 
+// 5
+// quiz.js:198 6
+// quiz.js:202 9
+// 2quiz.js:200 7 //2 times
+
+// const studentId = {
+//     firstName: 'elon',
+//     lastName: 'musk',
+// };
+// const studentgrade = {
+//     HTML: '85',
+//     CSS: '95',
+// };
+
+// const student = {... studentId, ... studentgrade};
+// console.log(student);
+// {firstName: "elon", lastName: "musk", HTML: "85", CSS: "95"}
+
+// const arr = [ [[1,2], [-1,-2]], ["a", "b"] ];
+// console.log(arr.flat(2));
+// [1, 2, -1, -2, "a", "b"]
+
