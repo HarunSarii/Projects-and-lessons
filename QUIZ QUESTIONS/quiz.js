@@ -247,3 +247,60 @@
 // var swappedText = swapCase(text);
 // tHE qUICK bROWN fOX
 
+
+// function spec_opr(...numbers){
+//     let sum = 0;
+//     for(let i of numbers){
+//         i%2 == 0 ? sum += i/2 : sum += i*3;
+//     }
+//     return sum;
+// }
+// console.log(spec_opr(3, 2, 6));  
+//13
+
+// for (let i=1; i<=1000; i++) {
+//     let sum = 0;
+//     for (let j=1; j < i; j++) {
+//         if (i%j==0)
+//         sum += j;
+//     }
+// }
+// if (sum == i || i==1) console.log(i)
+
+
+// function is_perfect(number) {
+// var temp = 0;
+//    for(var i=1;i<=number; i++)
+//      {
+//          if(number%i === 0){
+//             temp += i;
+//           }
+//      }
+//      if(temp === number && temp !== 0)
+//         {
+//        console.log(`${number} is a perfect number.`)
+//         } 
+//      else
+//         {
+//        console.log(`${number} is not a perfect number.`);
+//         }   
+//  } 
+// is_perfect(28);
+// 28 is a perfect number.
+
+
+//     backwards = "";
+//     for(let i=0; i<word.length; i++ ){
+
+//     }
+// }
+
+// function reverseString(word) {
+//     var output = word.split("").reverse().join("");
+//     if (output === word){
+//         console.log(`${word} is a palindrome`)
+//     } else {
+//         console.log(`${word} is NOT a palindrome`);
+//     }
+// }
+// reverseString("madam");
