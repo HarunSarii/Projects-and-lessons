@@ -26,55 +26,55 @@
 // console.log(Sammy)
 
 
-// Class declaration
-class ColorClass {
-  constructor(r, g, b, name) {
-    this.r = r;
-    this.g = g;
-    this.b = b;
-    this.name = name;
-  }
+// // Class declaration
+// class ColorClass {
+//   constructor(r, g, b, name) {
+//     this.r = r;
+//     this.g = g;
+//     this.b = b;
+//     this.name = name;
+//   }
 
-  rgb() {
-    const { r, g, b } = this;
-    return `rgb(${r}, ${g}, ${b})`;
-  }
+//   rgb() {
+//     const { r, g, b } = this;
+//     return `rgb(${r}, ${g}, ${b})`;
+//   }
 
-  rgba(a = 1.0) {
-    const { r, g, b } = this;
-    return `rgba(${r}, ${g}, ${b}, ${a})`;
-  }
+//   rgba(a = 1.0) {
+//     const { r, g, b } = this;
+//     return `rgba(${r}, ${g}, ${b}, ${a})`;
+//   }
 
-  hex() {
-    const { r, g, b } = this;
-    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-  }
+//   hex() {
+//     const { r, g, b } = this;
+//     return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+//   }
 
-  // adding static method to Class, not available in instances
-  static test() {
-    console.log('This is static method');
-  }
-}
+//   // adding static method to Class, not available in instances
+//   static test() {
+//     console.log('This is static method');
+//   }
+// }
 
-const red = new ColorClass(255, 67, 89, 'kırmızı');
-const white = new ColorClass(255, 255, 255, 'beyaz');
+// const red = new ColorClass(255, 67, 89, 'kırmızı');
+// const white = new ColorClass(255, 255, 255, 'beyaz');
 
-div1.style.backgroundColor = red.rgba(0.8);
-div2.style.backgroundColor = white.rgb();
+// div1.style.backgroundColor = red.rgba(0.8);
+// div2.style.backgroundColor = white.rgb();
 
-// examples of static methods in Objects and Arrays
+// // examples of static methods in Objects and Arrays
 
-const arr = [1, 2, 3, 4];
-// arr.from does not exist
-// but we can use Array.from() because this method is static
+// const arr = [1, 2, 3, 4];
+// // arr.from does not exist
+// // but we can use Array.from() because this method is static
 
-const person = {
-  name: 'Barry',
-  age: 44,
-};
+// const person = {
+//   name: 'Barry',
+//   age: 44,
+// };
 
-for (let item of Object.keys(person)) console.log(item);
-// Object.keys() is a static method
+// for (let item of Object.keys(person)) console.log(item);
+// // Object.keys() is a static method
 
 /*
 class Pet {
@@ -146,8 +146,52 @@ karabas.setPetAge(11);
 console.log(karabas.petAge);
 */
 
-const lineItems = [
-  { description: 'Eggs (Dozen)', quantity: 1, price: 3, total: 3 },
-  { description: 'Cheese', quantity: 0.5, price: 5, total: 2.5 },
-  { description: 'Butter', quantity: 2, price: 6, total: 12 }
-];
+// const lineItems = [
+//   { description: 'Eggs (Dozen)', quantity: 1, price: 3, total: 3 },
+//   { description: 'Cheese', quantity: 0.5, price: 5, total: 2.5 },
+//   { description: 'Butter', quantity: 2, price: 6, total: 12 }
+// ];
+
+// function add() {
+//   let counter = 0;
+//   return function() {
+//     counter += 1;
+//     return counter;
+//   };
+// }
+
+// const addFunc = add();
+
+// console.log(addFunc());
+// console.log(addFunc());
+// console.log(addFunc());
+
+// map.set('add', function (x, y) {
+//   return x + y
+// });
+
+// const addition = map.get('add');
+// console.log(addition(3, 5));
+
+// for (let key of map.keys()) console.log(key);
+
+
+const mySet = new Set();
+mySet.add(1);
+mySet.add(2);
+mySet.add(2);
+
+mySet.add('string');
+
+const obj = {a:1 , b:2};
+mySet.add(obj);
+
+// console.log(mySet);
+
+mySet.add({a:1, b:2});
+
+console.log(mySet.size);
+
+// console.log(mySet);
+
+
