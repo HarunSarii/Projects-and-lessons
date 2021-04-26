@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function User3() {
+const User3 = () => {
     return (
         <div>
             
         </div>
     )
 }
+
+export default User3
