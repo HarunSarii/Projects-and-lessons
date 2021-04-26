@@ -6,7 +6,7 @@ class Card2 extends Component {
     this.state = { isVisible: false };
   }
   isVisible = () => {
-    this.setState({ isVisible: !this.state.isVisble });
+    this.setState({ isVisible: !this.state.isVisible });
   };
   render() {
     const { isVisible } = this.state;
