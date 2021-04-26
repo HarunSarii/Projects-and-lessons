@@ -20,9 +20,9 @@
 //     setTimeout(function(){
 //         console.log(i);}, i*1000);
 //     }
-// console.log(i+2); 
+// console.log(i+2);
 
-// output: 1 2 5 3 3 
+// output: 1 2 5 3 3
 
 // var price = [
 //     {pr$: 700, name: 'pc'},
@@ -32,7 +32,7 @@
 // ];
 // const lower100 = price.map(n => n.pr$ < 100 && console.log(n));
 
-// output: {pr$: 30, name: "book"} 
+// output: {pr$: 30, name: "book"}
 //         {pr$: 90, name: "pen"}
 
 // var x = ["a", "b", "c"];
@@ -66,7 +66,7 @@
 //       return this.name+ " has " + this.legs + " legs.";
 //     }
 //     };
-  
+
 //   dog.bark();
 //   console.log(dog.result());
 
@@ -79,7 +79,7 @@
 //        return "I have a " + this.dogName + " and it has " + this.foot + " legs" ;
 //     }
 //   }
-//   myDog = new Dog("Buldog", 4) 
+//   myDog = new Dog("Buldog", 4)
 //   document.getElementById("content").innerHTML = myDog.current();
 
 // class Dog {
@@ -91,7 +91,7 @@
 //        return "I have a " + this.dogName;
 //     }
 //   }
-  
+
 //   class Specy extends Dog {
 //     constructor(name, foot, char) {
 //       super(name, foot);
@@ -101,7 +101,7 @@
 //       return this.current() + ', it is  ' + this.character;
 //     }
 //   }
-  
+
 //   myDog = new Specy("Buldog", 4, "curious");
 //   document.getElementById("content").innerHTML = myDog.show();
 
@@ -161,7 +161,7 @@
 // const c2 = c1;
 
 // c2.f = "elvis";
-// console.log(c1.f); 
+// console.log(c1.f);
 //output:elvis
 
 // var a = Array.from("Clarusway");
@@ -199,7 +199,7 @@
 //     setTimeout(function(){
 //         console.log( i);}, i*1000);
 //     }
-// console.log(i+2); 
+// console.log(i+2);
 // 5
 // quiz.js:198 6
 // quiz.js:202 9
@@ -229,7 +229,6 @@
 // console.log(result);
 // 1234567890
 
-
 // var swapCase = function(letters){
 //     var newLetters = "";
 //     for(var i = 0; i<letters.length; i++){
@@ -247,7 +246,6 @@
 // var swappedText = swapCase(text);
 // tHE qUICK bROWN fOX
 
-
 // function spec_opr(...numbers){
 //     let sum = 0;
 //     for(let i of numbers){
@@ -255,7 +253,7 @@
 //     }
 //     return sum;
 // }
-// console.log(spec_opr(3, 2, 6));  
+// console.log(spec_opr(3, 2, 6));
 //13
 
 // for (let i=1; i<=1000; i++) {
@@ -266,7 +264,6 @@
 //     }
 // }
 // if (sum == i || i==1) console.log(i)
-
 
 // function is_perfect(number) {
 // var temp = 0;
@@ -279,15 +276,14 @@
 //      if(temp === number && temp !== 0)
 //         {
 //        console.log(`${number} is a perfect number.`)
-//         } 
+//         }
 //      else
 //         {
 //        console.log(`${number} is not a perfect number.`);
-//         }   
-//  } 
+//         }
+//  }
 // is_perfect(28);
 // 28 is a perfect number.
-
 
 //     backwards = "";
 //     for(let i=0; i<word.length; i++ ){
@@ -309,3 +305,9 @@
 // console.log(arr.reduce((accumulator, item) => accumulator + item));
 //45
 
+// (function (x) {
+//   return (function (y) {
+//     console.log(x);
+//   })(2);
+// })(1);
+// output:1
