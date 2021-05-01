@@ -1,3 +1,8 @@
+const startTime = Date.now();
+const myLog = (input) => {
+  console.log(`Elapsed: ${Date.now() - startTime}ms\t\t${input}`);
+};
+
 const slowTask = () => {
   let i = 0;
   do {
