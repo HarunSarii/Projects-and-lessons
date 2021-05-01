@@ -13,7 +13,7 @@ const slowTask = () => {
   do {
     i++;
   } while (i < 500000000);
-  return 'task is completed.';
+  return "task is completed.";
 };
 
 // const btn = document.querySelector('button');
@@ -45,28 +45,28 @@ const slowTask = () => {
 
 function brewTea() {
   /* --- */
-  return 'brewTea done';
+  return "brewTea done";
 }
 
 function prepareBreakfast() {
   /* --- */
-  return 'prepareBreakfast done';
+  return "prepareBreakfast done";
 }
 
 function makeBreakfast() {
   /* --- */
-  return 'makeBreakfast done';
+  return "makeBreakfast done";
 }
 
 function drinkTea() {
   /* --- */
-  return 'drinkTea done';
+  return "drinkTea done";
 }
 
 function breakfastTime() {
   myLog(makeBreakfast());
   myLog(drinkTea());
-  myLog(' all finished');
+  myLog(" all finished");
 }
 
 // setTimeout(() => {
