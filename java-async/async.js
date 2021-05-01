@@ -2,16 +2,25 @@ const slowTask = () => {
   let i = 0;
   do {
     i++;
-  } while (i < 1000000);
+  } while (i < 10000);
   return "task is completed";
 };
 
 const btn = document.querySelector("button");
 btn.addEventListener("click", () => {
-  const result = slowTask();
-  console.log(result);
+  setTimeout(() => {
+    const result = slowTask();
+    console.log(result);
+  }, 0);
 
   let pElem = document.createElement("p");
   PElem.innerHTML = `This is newly added paragraph`;
   document.body.appendChild(pElem);
 });
+
+setTimeout(() => {
+  console.log("time started");
+}, 0);
+
+console.log("time ended");
+// console.log()
