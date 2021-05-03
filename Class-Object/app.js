@@ -3,7 +3,7 @@
 //     lastName: 'Mitchell',
 //     birthYear: '1977',
 //     skills: ['JS', 'AWS', 'Dockers', 'Python'],
-//     employed: true, 
+//     employed: true,
 
 //     2021: 'Clarusway FS',
 //     true: 'is it working',
@@ -27,7 +27,6 @@
 
 // const keyTag = 'Name';
 // console.log(person['first' + keyTag]);
-
 
 // console.log(person.birthYear);
 // person.birthYear = 1978;
@@ -53,7 +52,7 @@
 //     lastName: 'Mitchell',
 //     birthYear: 1977,
 //     skills: ['JS', 'AWS', 'Dockers', 'Python'],
-//     employed: true, 
+//     employed: true,
 
 //     //bad code:
 //     calcAgeBad: function (bYear) {
@@ -135,41 +134,106 @@
 // const guests3 = hotel.numGuests ?? 40;
 // console.log(guests3);
 
+// function makeColor(r, g, b) {
+//   const color = {};
+//   color.r = r;
+//   color.g = g;
+//   color.b = b;
+//   color.rgb = function () {
+//     const { r, g, b } = this;
+//     return `rgb(${r}, ${g}, ${b})`;
+//   };
+//   color.hex = function () {
+//     const { r, g, b } = this;
+//     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+//   };
+//   return color;
+// }
 
-function makeColor(r, g, b) {
-    const color = {};
-    color.r = r;
-    color.g = g;
-    color.b = b;
-    color.rgb = function () {
-      const { r, g, b } = this;
-      return `rgb(${r}, ${g}, ${b})`;
-    };
-    color.hex = function () {
-      const { r, g, b } = this;
-      return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    };
-    return color;
+// const firstColor = makeColor(55, 55, 55);
+// console.log(firstColor);
+// console.log(firstColor.rgb());
+// console.log(firstColor.hex());
+
+// const div1 = document.getElementById("mydiv1");
+// const div2 = document.getElementById("mydiv2");
+
+// div1.style.backgroundColor = firstColor.rgb();
+
+// function Color(r, g, b) {
+//   this.r = r;
+//   this.g = g;
+//   this.b = b;
+// }
+
+// console.log(Color(55, 55, 55));
+
+// const color1 = new Color(55, 55, 55);
+// console.log(color1);
+
+// const person = {
+//   name: "Barry",
+//   age: 44,
+// };
+
+// for (let item of Object.keys(person)) console.log(item);
+
+// class Pet {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   info() {
+//     return `This pet's name is ${this.name} and it is ${this.age} years old `;
+//   }
+// }
+
+// const pet1 = new Pet("karabas", 5);
+// console.log(pet1.info());
+
+// class Dog extends Pet {
+//   eat() {
+//     return `${this.name} eats meat`;
+//   }
+// }
+
+// const karabas = new Dog("karabas ", 5);
+// console.log(karabas.eat());
+// console.log(karabas.info());
+// console.log(karabas.age);
+
+// class Cat extends Pet {
+//   constructor(name, age, eyes = "black") {
+//     super(name, age);
+//     this.eyes = eyes;
+//   }
+
+//   eat() {
+//     return `${this.name} eats fish`;
+//   }
+//   info() {
+//     return `This pet's name is ${this.name} and it is ${this.age} years old and it has ${this.eyes} eyes`;
+//   }
+// }
+
+// const Tekir = new Cat("Tekir", 3, "blue");
+// console.log(Tekir.eat());
+// console.log(Tekir.info());
+
+class Pet {
+  #age;
+  constructor(name, age) {
+    this.name = name;
+    this.#age = age;
   }
 
-  const firstColor = makeColor(55, 55, 55);
-  console.log(firstColor);
-  console.log(firstColor.rgb());
-  console.log(firstColor.hex());
-
-  const div1 = document.getElementById('mydiv1');
-  const div2 = document.getElementById('mydiv2');
-
-  div1.style.backgroundColor = firstColor.rgb();
-
-  function Color(r,g, b) {
-      this.r = r;
-      this.g = g;
-      this.b = b;
+  info() {
+    return `This pet's name is ${this.name} and it is ${this.age} years old `;
   }
+}
 
-console.log(Color(55, 55, 55));
+const karabas = new Pet("Karbaş", 5);
+// karabas.name = "tekir";
 
-const color1 = new Color(55, 55, 55);
-console.log(color1);
-
+console.log(karabas.age);
