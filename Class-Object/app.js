@@ -222,6 +222,7 @@
 // console.log(Tekir.info());
 
 class Pet {
+  //private properties
   #age;
   constructor(name, age) {
     this.name = name;
@@ -231,9 +232,28 @@ class Pet {
   info() {
     return `This pet's name is ${this.name} and it is ${this.age} years old `;
   }
+
+  // karabas.name = "tekir";
+
+  // console.log(karabas.age);
+
+  get petAge() {
+    return this.#age;
+  }
+  set petAge(newAge) {
+    this.#age = newAge;
+  }
+
+  setPetAge(newAge) {
+    this.#age = newAge;
+  }
 }
 
 const karabas = new Pet("Karbaş", 5);
-// karabas.name = "tekir";
+console.log(karabas.petAge);
 
-console.log(karabas.age);
+karabas.petAge = 4;
+console.log(karabas.petAge);
+
+karabas.setPetAge(11);
+console.log(karabas.petAge);
