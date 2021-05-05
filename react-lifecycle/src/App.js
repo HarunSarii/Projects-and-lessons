@@ -1,12 +1,14 @@
-import "./App.css";
-import TestComponents from "./components/TestComponent";
+import { useState } from "react";
 
-function App() {
+import "./App.css";
+import TestComponent from "./components/TestComponent";
+
+export default function App() {
+  const [isVisible, SetIsVisible] = useState(true);
   return (
     <div className="App">
-      <TestComponent />
+      {isVisible ? <TestComponent color="red" /> : null}
+      <button onClick={() => SetIsVisible(false)}>REMOVE</button>
     </div>
   );
 }
-
-export default App;
