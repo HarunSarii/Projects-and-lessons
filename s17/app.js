@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 
-const renderCountry = (data, className = '') => {
-  const countryElm = document.querySelector('.countries');
+const renderCountry = (data, className = "") => {
+  const countryElm = document.querySelector(".countries");
   const html = `
   <article class="country ${className}">
     <img class="country__img" src="${data.flag}" />
@@ -16,7 +16,7 @@ const renderCountry = (data, className = '') => {
     </div>
   </article>
   `;
-  countryElm.insertAdjacentHTML('beforeend', html);
+  countryElm.insertAdjacentHTML("beforeend", html);
   countryElm.style.opacity = 1;
 };
 
@@ -36,3 +36,117 @@ const renderCountry = (data, className = '') => {
 // };
 
 // getCountryData('turkey');
+
+// const request = fetch("https:restcountries.eu/rest/v2/name/turkey");
+// console.log(request);
+
+// request
+//   .then((response) => {
+//     console.log(response);
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     renderCountry(data[0]);
+//   });
+
+// const getCountryData = (country) => {
+//   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+//     .then((response) => {
+//       // console.log(response);
+//       if (!response.ok)
+//         throw new Error(`sthg went wrong Error ${response.status}`);
+//       return response.json();
+//     })
+//     .then((data) => {
+//       // console.log(data);
+//       renderCountry(data[0]);
+//     })
+//     .catch((err) => console.log(err.message));
+// };
+
+// getCountryData("Turkey");
+// // getCountryData("Germany");
+
+// const getCountryNeighbourData = (country) => {
+//   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+//     .then((response) => {
+//       // console.log(response);
+//       if (!response.ok)
+//         throw new Error(`sthg went wrong Error ${response.status}`);
+//       return response.json();
+//     })
+//     .then((data) => {
+//       // console.log(data);
+//       renderCountry(data[0]);
+//     })
+//     .catch((err) => console.log(err.message));
+// };
+
+// getCountryNeighbourData("Turkey");
+// // getCountryData("Germany");
+
+// const flipCoinPromise = new Promise((resolve, reject) => {
+//   console.log("welcome the toss game");
+//   console.log("flipping the coin");
+//   setTimeout(() => {
+//     Math.random() >= 0.5
+//       ? resolve("here head comes! you Win!")
+//       : reject(new Error("tail comes"));
+//     console.log(Math.random());
+//   }, 3000);
+// });
+
+// flipCoinPromise
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err.message));
+
+// const wait = (seconds) => {
+//   return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+// };
+// wait(1)
+//   .then(() => {
+//     console.log("1 sec passed");
+//     return wait(1);
+//   })
+//   .then(() => {
+//     console.log("2 sec passed");
+//     return wait(1);
+//   })
+//   .then(() => {
+//     console.log("3 sec passed");
+//     return wait(1);
+//   })
+//   .then(() => {
+//     console.log("4 sec passed");
+//     return wait(1);
+//   });
+
+const getCountryNeighbourDataAsync = async (country) => {
+  try {
+    let response = await fetch(
+      `https://restcountries.eu/rest/v2/name/${country}`
+    );
+    console.log(response);
+    if (!response.ok) throw new Error(`Sth went wrong ${response.status}`);
+
+    let data = await response.json();
+
+    renderCountry(data[0]);
+
+    const neighbour = data[0].borders[0];
+
+    response = await fetch(
+      `https://restcountries.eu/rest/v2/alpha/${neighbour}`
+    );
+
+    if (!response.ok) throw new Error(`No neighbour ${response.status}`);
+    data = await response.json();
+
+    renderCountry(data, "neighbour");
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+getCountryNeighbourDataAsync("France");
