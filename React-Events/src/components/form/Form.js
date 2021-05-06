@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { setInput } from "../../helper/inputHelper";
 import "./styles.css";
 
 const Form = () => {
@@ -7,29 +8,30 @@ const Form = () => {
   const [password, setPassword] = useState("");
   const [country, setCountry] = useState("");
 
-  const handleName = (e) => setName(e.target.value);
-  const handleEmail = (e) => setEmail(e.target.value);
-  const handlePassword = (e) => setPassword(e.target.value);
-  const handleCountry = (e) => setCountry(e.target.value);
-  const handleSubmit = () => {
+  // const handleName = (e) => setName(e.target.value);
+  // const handleEmail = (e) => setEmail(e.target.value);
+  // const handlePassword = (e) => setPassword(e.target.value);
+  // const handleCountry = (e) => setCountry(e.target.value);
+  const handleSubmit = (e) => {
     e.preventDefault();
     alert(`
-    username: ${name}
+    userName: ${name}
     email: ${email}
     password: ${password}
-    country: ${country}
+    country: ${country};    
     `);
     setName("");
-    serEmail("");
+    setEmail("");
     setPassword("");
     setCountry("");
   };
-  constSetInput = (setter) => (e) => setter(e.target.value);
+  // const setInput = (setter) => (e) => setter(e.target.value);
+
   return (
     <div style={{ height: "110vh" }}>
       <form onSubmit={handleSubmit}>
         <div>
-          <p> {name}</p>
+          <p>{name}</p>
           <label>
             <strong>Username:</strong>{" "}
           </label>
@@ -50,7 +52,7 @@ const Form = () => {
           <input
             value={email}
             type="email"
-            placeholder="mail"
+            placeholder="email"
             onChange={setInput(setEmail)}
           />
         </div>
@@ -62,19 +64,19 @@ const Form = () => {
           <br />
           <input
             value={password}
-            // type="password"
+            type="password"
             placeholder="pass"
             onChange={setInput(setPassword)}
           />
         </div>
         <div style={{ margin: "10px auto" }}>
-          <p> {country}</p>
+          <p>{country}</p>
           <label>
             <strong>Country: </strong>
           </label>
           <select
             value={country}
-            // onChange={setInput(setCountry)}
+            onChange={setInput(setCountry)}
             style={{ marginTop: "10px", width: "100px", padding: "10px" }}
           >
             <option value="">Country</option>
