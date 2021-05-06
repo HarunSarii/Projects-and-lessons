@@ -1,15 +1,15 @@
-const startTime = Date.now();
-const myLog = (input) => {
-  console.log(`Elapsed: ${Date.now() - startTime}ms \t\t${input}`);
-};
+// const startTime = Date.now();
+// const myLog = (input) => {
+//   console.log(`Elapsed: ${Date.now() - startTime}ms \t\t${input}`);
+// };
 
-const slowTask = () => {
-  let i = 0;
-  do {
-    i++;
-  } while (i < 500000000);
-  return "task is completed.";
-};
+// const slowTask = () => {
+//   let i = 0;
+//   do {
+//     i++;
+//   } while (i < 500000000);
+//   return "task is completed.";
+// };
 
 // myLog("1. Synchronous");
 
@@ -39,20 +39,31 @@ const slowTask = () => {
 //     console.log(err);
 //   });
 
-const myPromise = new Promise((resolve, reject) => {
-  myLog("promise started");
-  /* ---- */
-  resolve("task completed");
-});
+// const myPromise = new Promise((resolve, reject) => {
+//   myLog("promise started");
+//   /* ---- */
+//   resolve("task completed");
+// });
 
-myPromise
-  .then((msg) => {
-    myLog(msg);
+// myPromise
+//   .then((msg) => {
+//     myLog(msg);
+//   })
+//   .catch((err) => {
+//     myLog(err);
+//   });
+
+// const brewTea = newPromise()
+//   .resolve()
+//   .then(() => {});
+
+const url = "https://jsonplaceholder.typicode.com/users/8";
+
+fetch(url)
+  .then((payload) => {
+    if (payload.status !== 200) throw Error(payload.status);
+    console.log(payload);
+    return payload.json();
   })
-  .catch((err) => {
-    myLog(err);
-  });
-
-const brewTea = newPromise()
-  .resolve()
-  .then(() => {});
+  .then((user) => console.log(user.email))
+  .catch((err) => console.log(err));
