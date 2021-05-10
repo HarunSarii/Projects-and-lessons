@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable arrow-body-style */
 
+const { resolveConfig } = require("prettier");
+
 const renderCountry = (data, className = '') => {
   const countryElm = document.querySelector('.countries');
   const html = `
@@ -236,3 +238,41 @@ const getCountryNeighbourDataAsync = async (country) => {
 
 getCountryNeighbourDataAsync('New Zealand');
 */
+
+const getCountryNeighbourDataAsyncAxios = async (country) => {
+  try{
+    const response = await axios.get(
+      `https://restcountries.eu/rest/v2/name/${country}`
+    );
+
+    renderCountry(response.data[0]);
+
+    response.data[0].borders.forEach((neighbour)=> {
+    const neighbourResponse = await axios.get(
+      `https://restcountries.eu/rest/v2/alpha/${neighbour}`
+      );
+      renderCountry(neighbourResponse.data, 'neighbour');
+    });
+
+  } catch (err) {
+   console.log(err.message);
+  }
+};
+
+
+const createImage = (imgPath) => {
+  const imgcontainer = document.querySelector('.images');
+  return new Promise ((response, reject) => {
+    const img = document.createElement('img');
+    img.src = imgPath;
+
+    img.addEventListener('load', ()=>{
+      imgcontainer.append(img);
+      resolve(img)
+    });
+    
+  })
+}
+
+
+
