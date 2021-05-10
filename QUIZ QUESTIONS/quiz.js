@@ -319,3 +319,19 @@
 //   setTimeout(() => console.log(i), 1);
 // }
 // // 3 3 3 and 0 1 2
+
+// const arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// function cleanArr(arr) {
+//   let map = new Map();
+
+//   for (let value of arr) {
+//     let key = value.toLowerCase().split("").sort().join("");
+//     map.set(key, value);
+//     console.log(map.get(value));
+//   }
+//   return Array.from(map.values());
+// }
+
+// console.log(cleanArr(arr));
+// //(3) ["PAN", "hectares", "era"]
