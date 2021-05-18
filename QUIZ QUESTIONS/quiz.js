@@ -335,3 +335,29 @@
 
 // console.log(cleanArr(arr));
 // //(3) ["PAN", "hectares", "era"]
+
+const mySet = new Set();
+
+mySet.add(1); // added a number into set
+mySet.add(2);
+mySet.add(2); // does nothing
+
+mySet.add("string"); // added a string into set
+
+const obj = { a: 1, b: 2 };
+mySet.add(obj); // added an object into set
+
+console.log(mySet);
+
+mySet.add({ a: 1, b: 2 });
+// now we have 2 objects in this set. Although both objects has same key and values both of them appear in the set as these objects are not same objects in memory.
+
+console.log(mySet.has(1)); // true
+console.log(mySet.has(3)); // false
+
+mySet.delete(1); // deleted from set
+
+for (let value of mySet) console.log(value);
+
+mySet.forEach((value, i) => console.log(value, i));
+// as set has no key, here value and i both display same value

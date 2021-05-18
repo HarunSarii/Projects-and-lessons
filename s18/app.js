@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable arrow-body-style */
 
-const { resolveConfig } = require("prettier");
+// const { resolveConfig } = require("prettier");
 
-const renderCountry = (data, className = '') => {
-  const countryElm = document.querySelector('.countries');
+const renderCountry = (data, className = "") => {
+  const countryElm = document.querySelector(".countries");
   const html = `
   <article class="country ${className}">
     <img class="country__img" src="${data.flag}" />
@@ -19,7 +19,7 @@ const renderCountry = (data, className = '') => {
     </div>
   </article>
   `;
-  countryElm.insertAdjacentHTML('beforeend', html);
+  countryElm.insertAdjacentHTML("beforeend", html);
   countryElm.style.opacity = 1;
 };
 
@@ -239,40 +239,162 @@ const getCountryNeighbourDataAsync = async (country) => {
 getCountryNeighbourDataAsync('New Zealand');
 */
 
+// const getCountryNeighbourDataAsyncAxios = async (country) => {
+//   try{
+//     const response = await axios.get(
+//       `https://restcountries.eu/rest/v2/name/${country}`
+//     );
+
+//     renderCountry(response.data[0]);
+
+//     response.data[0].borders.forEach((neighbour)=> {
+//     const neighbourResponse = await axios.get(
+//       `https://restcountries.eu/rest/v2/alpha/${neighbour}`
+//       );
+//       renderCountry(neighbourResponse.data, 'neighbour');
+//     });
+
+//   } catch (err) {
+//    console.log(err.message);
+//   }
+// };
+
+// const createImage = (imgPath) => {
+//   const imgcontainer = document.querySelector('.images');
+//   return new Promise ((response, reject) => {
+//     const img = document.createElement('img');
+//     img.src = imgPath;
+
+//     img.addEventListener('load', ()=>{
+//       imgcontainer.append(img);
+//       resolve(img)
+//     });
+
+//   })
+// }
+
 const getCountryNeighbourDataAsyncAxios = async (country) => {
-  try{
+  try {
     const response = await axios.get(
       `https://restcountries.eu/rest/v2/name/${country}`
     );
-
     renderCountry(response.data[0]);
 
-    response.data[0].borders.forEach((neighbour)=> {
-    const neighbourResponse = await axios.get(
-      `https://restcountries.eu/rest/v2/alpha/${neighbour}`
+    response.data[0].borders.forEach(async (neighbour) => {
+      const neighbourResponse = await axios.get(
+        `https://restcountries.eu/rest/v2/alpha/${neighbour}`
       );
-      renderCountry(neighbourResponse.data, 'neighbour');
+      renderCountry(neighbourResponse.data, "neighbour");
     });
-
   } catch (err) {
-   console.log(err.message);
+    console.log(err.message);
   }
 };
 
+// getCountryNeighbourDataAsyncAxios("Turkey");
 
 const createImage = (imgPath) => {
-  const imgcontainer = document.querySelector('.images');
-  return new Promise ((response, reject) => {
-    const img = document.createElement('img');
+  const imgContainer = document.querySelector(".images");
+  return new Promise((resolve, reject) => {
+    const img = document.createElement("img");
     img.src = imgPath;
 
-    img.addEventListener('load', ()=>{
-      imgcontainer.append(img);
-      resolve(img)
+    img.addEventListener("load", () => {
+      imgContainer.append(img);
+      resolve(img);
     });
-    
-  })
+    img.addEventListener("error", () => reject(new Error("Image not found")));
+  });
+};
+
+let currentImg;
+
+const wait = (seconds) => {
+  return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+};
+
+// createImage("images/image1.jpg")
+//   .then((img) => {
+//     currentImg = img;
+//     console.log("Image1 loaded");
+//     return wait(3);
+//   })
+//   .then(() => {
+//     currentImg.style.display = "none";
+//     return createImage("images/image2.jpg");
+//   })
+//   .then((img) => {
+//     currentImg = img;
+//     console.log("image2 loaded");
+//     return wait(3);
+//   })
+//   .then(() => {
+//     currentImg.style.display = "none";
+//   });
+
+async function displayImages() {
+  let img = await createImage("images/image1.jpg");
+  console.log("image1 loaded ");
+  await wait(3);
+  img.style.display = "none";
+  img = await createImage("images/image2.jpg");
+  console.log("image2 loaded");
+  await wait(3);
+  img.style.display = "none";
 }
 
+// displayImages();
 
+const get3Countries = async function (c1, c2, c3) {
+  try {
+    // const res1 = await axios.get(`https://restcountries.eu/rest/v2/name/${c1}`);
+    // const res2 = await axios.get(`https://restcountries.eu/rest/v2/name/${c2}`);
+    // const res3 = await axios.get(`https://restcountries.eu/rest/v2/name/${c3}`);
 
+    // renderCountry(res1.data[0]);
+    // renderCountry(res2.data[1]);
+    // renderCountry(res3.data[2]);
+
+    const data = await Promise.race([
+      axios.get(`https://restcountries.eu/rest/v2/name/${c1}`),
+      axios.get(`https://restcountries.eu/rest/v2/name/${c2}`),
+      axios.get(`https://restcountries.eu/rest/v2/name/${c3}`),
+    ]);
+
+    // data.forEach((country) => renderCountry(country.data[0]));
+    renderCountry(data.data[0]);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+// get3Countries("Turkey", "Canada", "Germany");
+
+const timeOut1 = (sec) => {
+  return new Promise((_, reject) => {
+    setTimeout(reject(new Error("request took too long")), sec * 1000);
+  });
+};
+
+const timeOut = (sec) => {
+  return new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error("request took too long!"));
+    }, sec * 1000);
+  });
+};
+
+// Promise.race([
+//   axios.get(`https://restcountries.eu/rest/v2/name/Turkey`),
+//   timeOut(0.01),
+//   axios.get(`https://restcountries.eu/rest/v2/name/Germany`),
+// ])
+//   .then((res) => renderCountry(res.data[0]))
+//   .catch((err) => console.log(err.message));
+
+Promise.allSettled([
+  axios.get(`https://restcountries.eu/rest/v2/name/Turkey`),
+  timeOut(0.01),
+  axios.get(`https://restcountries.eu/rest/v2/name/Germany`),
+])
+  .then((res) => renderCountry(res[0].data[0]))
+  .catch((err) => console.log(err.message));
