@@ -150,3 +150,31 @@ const getCountryNeighbourDataAsync = async (country) => {
 };
 
 getCountryNeighbourDataAsync("France");
+
+async function displayImages() {
+  let img = await createImage("images/image1.jpg");
+  console.log("Image 1 loaded");
+  await wait(3);
+  img.style.display = "none";
+  img = await createImage("images/image2.jpg");
+  console.log("Image 2 loaded");
+  await wait(3);
+  img.style.display = "none";
+}
+
+const loadNImages = async function (number) {
+  const imagePaths = Array.from(
+    { length: number },
+    (_, index) => `images/image${index + 1}.jpg`
+  );
+
+  console.log(imagePaths);
+
+  const images = imagePaths.map((img) => createImage(img));
+  console.log(images);
+  const imageElms = await Promise.all(images);
+  console.log(imageElms);
+  imageElms.forEach((img) => img.classList.add("parallel"));
+};
+
+loadNImages(6);
